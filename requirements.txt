@@ -19,7 +19,7 @@ plotly==6.5.0
 pluggy==1.6.0
 ply==3.11
 Pygments==2.19.2
-pyomo==6.9.5
+pyomo==6.9.4
 pyparsing==3.2.5
 pytest==9.0.2
 python-dateutil==2.9.0.post0

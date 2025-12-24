@@ -138,7 +138,7 @@ Flexible Ramp Up`, and `Flexible Ramp Down`. For these reserves, within the conf
 4. `Timeseries`: User provides timeseries reserve requirements in the [reserves_timeseries](#reserves_timeseries) folder.
 
 
-### DA_reserves_fixed_percentage.csv
+### `DA_reserves_fixed_percentage.csv`
 <a id="DA_reserve_default"></a>
 
 | Column                   | Description                                                      |
@@ -151,19 +151,19 @@ Flexible Ramp Up`, and `Flexible Ramp Down`. For these reserves, within the conf
 | Eligible Areas                 | Specifies the areas where fixed or percentage reserve requirements should be applied |
 | Remarks| Brief description of the reserve |
 
-### RT_reserves_fixed_percentage.csv
+### `RT_reserves_fixed_percentage.csv`
 <a id="RT_reserve_default"></a>
 
 This CSV file is formatted the exact same way as the [DA_reserves_fixed_percentage.csv](#DA_reserves_default) file. One key distinction is that the `System Reserve` is not allocated in the real-time economic dispatch.
 
-### reserve_deployment.csv
+### `reserve_deployment.csv`
 <a id="reserves_deployment"></a>
 
 QuESt PCM also allows users to model reserve deployments and evaluate their impacts on generator revenues, storage revenues, and storage state of charge. This CSV file is used to specify time-series values for reserve deployments.
 
 For regulation up and regulation down reserves, users must provide the fraction of the procured regulation capacity that was actually deployed in real time. For spinning, non-spinning, and supplemental reserves, users must specify the duration (in minutes) for which the reserves were actually deployed. Within this [test CSV file](../Data/5bus/reserves/reserve_deployment.csv), we have included reserve deployment data derived from CAISO and PJM markets for regulation up, down, and spinning reserves.
 
-### reserves_timeseries/
+### `reserves_timeseries/`
 <a id="reserves_timeseries"></a>
 
 This folder contains timeseries CSV files for reserve requirements. For any reserve type configured with the `Timeseries` option in the YAML file, QuESt PCM reads the corresponding timeseries CSV from this folder.
@@ -177,14 +177,14 @@ Each reserve timeseries file must follow the naming convention:
 Within each CSV, reserve requirements are specified by columns. System-wide reserves must use the column name `System`. Area-specific reserves must use column names in the form `Area <AreaName>`, where `<AreaName>` matches the area name defined in [bus.csv](#bus).
 
 [Back to Top](#top)
-## storage/
+## `storage/`
 <a id="storage"></a>
 
 Currently, QuESt PCM supports three storage system models: generic, battery, and pumped hydro. The generic storage model represents a conventional storage system that does not participate in ancillary service markets. In contrast, the battery and pumped hydro models incorporate technology-specific operational constraints and explicitly model participation in ancillary service markets.
 
 Details on how to populate the input data for each of these three storage models are provided below.
 
-### generic_storage.csv
+### `generic_storage.csv`
 <a id="generic_storage"></a>
 
 | Column                      | Description                                                                                    |
@@ -209,7 +209,7 @@ Details on how to populate the input data for each of these three storage models
 | Discharging RampDOWN MW/min | Maximum rate at which discharging power can decrease (MW/min).                                 |
 
 
-### battery_storage.csv
+### `battery_storage.csv`
 <a id="battery_storage"></a>
 
 | Column                         | Description                                                                                    |
@@ -226,7 +226,7 @@ Details on how to populate the input data for each of these three storage models
 | Minimum SoC                    | Minimum allowable state of charge during operation.                                            |
 | Maximum SoC                    | Maximum allowable state of charge during operation.                                            |
 
-### pumped_hydro.csv
+### `pumped_hydro.csv`
 <a id="pumped_hydro"></a>
 
 | Column                                  | Description                                                                                                          |
