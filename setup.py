@@ -19,7 +19,7 @@ setup(
         "matplotlib==3.10.8",
         "narwhals==2.14.0",
         "networkx==3.6.1",
-        "numpy==2.3.5",
+        "numpy==1.26.4",
         "openpyxl==3.1.5",
         "packaging==25.0",
         "pandas==2.3.3",
